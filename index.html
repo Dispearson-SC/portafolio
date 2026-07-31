@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#fafbfc" />
-  <meta name="description" content="Portafolio de estudiante de Ing. en Sistemas en TecNM. Modernizando 12 sucursales con IA y código. Python, Claude Code, Odoo, POS." />
+  <meta name="description" content="Systems Engineering student portfolio at TecNM. Modernizing 12 branches with AI and code. Python, Claude Code, Odoo, POS." data-en="Systems Engineering student portfolio at TecNM. Modernizing 12 branches with AI and code. Python, Claude Code, Odoo, POS." data-es="Portafolio de estudiante de Ing. en Sistemas en TecNM. Modernizando 12 sucursales con IA y código. Python, Claude Code, Odoo, POS." />
   <meta name="author" content="Jose Gerardo Tapia Suastegui" />
-  <meta property="og:title" content="Comerciante de cuna. Ingeniero en evolución." />
-  <meta property="og:description" content="Estudiante de Ing. en Sistemas. 12 sucursales modernizadas con IA y código." />
-  <title>Comerciante de cuna · Ingeniero en evolución</title>
+  <meta property="og:title" content="Merchant by birth. Engineer in evolution." data-en="Merchant by birth. Engineer in evolution." data-es="Comerciante de cuna. Ingeniero en evolución." />
+  <meta property="og:description" content="Systems Engineering student. 12 branches modernized with AI and code." data-en="Systems Engineering student. 12 branches modernized with AI and code." data-es="Estudiante de Ing. en Sistemas. 12 sucursales modernizadas con IA y código." />
+  <title>Merchant by birth · Engineer in evolution</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -212,6 +212,36 @@
       transition: background 0.2s;
     }
     .nav-cta:hover { background: var(--accent); color: white !important; }
+
+    /* Language switcher */
+    .nav-lang {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.5rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+    }
+    .lang-btn {
+      padding: 0.1rem 0.3rem;
+      border-radius: 4px;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: color 0.15s, background 0.15s;
+      line-height: 1;
+    }
+    .lang-btn:hover { color: var(--text); }
+    .lang-btn[aria-pressed="true"] {
+      color: var(--text);
+      background: var(--surface-3);
+    }
+    .lang-sep {
+      color: var(--text-faint);
+      font-weight: 400;
+    }
 
     /* ============================================================
        HERO
@@ -846,14 +876,19 @@
   <nav class="nav" id="nav">
     <a href="#hero" class="nav-brand">
       <span class="nav-brand-mark">GT</span>
-      <span>Portafolio</span>
+      <span data-en="Portfolio" data-es="Portafolio">Portfolio</span>
     </a>
     <ul class="nav-links">
-      <li><a href="#work">Work</a></li>
-      <li><a href="#stack">Stack</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#ambassador">Ambassador</a></li>
-      <li><a href="#contact" class="nav-cta">Contacto</a></li>
+      <li><a href="#work" data-en="Work" data-es="Work">Work</a></li>
+      <li><a href="#stack" data-en="Stack" data-es="Stack">Stack</a></li>
+      <li><a href="#experience" data-en="Experience" data-es="Experience">Experience</a></li>
+      <li><a href="#ambassador" data-en="Ambassador" data-es="Ambassador">Ambassador</a></li>
+      <li class="nav-lang" aria-label="Language switcher">
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+        <span class="lang-sep">/</span>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+      </li>
+      <li><a href="#contact" class="nav-cta" data-en="Contact" data-es="Contacto">Contact</a></li>
     </ul>
   </nav>
 
@@ -871,49 +906,47 @@
             </div>
             <div class="avatar-meta">
               <span class="avatar-name">Jose Gerardo Tapia Suastegui</span>
-              <span class="avatar-tag">Ing. en Sistemas · 4° sem</span>
+              <span class="avatar-tag" data-en="B.Sc. Systems Engineering · 4th sem" data-es="Ing. en Sistemas · 4° sem">B.Sc. Systems Engineering · 4th sem</span>
             </div>
           </div>
           <div class="hero-eyebrow eyebrow">
             <span class="dot"></span>
-            Portafolio · 2026
+            <span data-en="Portfolio · 2026" data-es="Portafolio · 2026">Portfolio · 2026</span>
           </div>
           <h1 class="hero-title">
-            <span class="hero-title-line">Comerciante de cuna.</span>
-            <span class="hero-title-line">Ingeniero <em>en evolución.</em></span>
+            <span class="hero-title-line" data-en="Merchant by birth." data-es="Comerciante de cuna.">Merchant by birth.</span>
+            <span class="hero-title-line" data-en="Engineer <em>in evolution.</em>" data-es="Ingeniero <em>en evolución.</em>">Engineer <em>in evolution.</em></span>
           </h1>
-          <p class="hero-sub">
-            Estudiante de Ing. en Sistemas en TecNM. Modernizando 12 sucursales con IA, código y sentido común. Buscando programa ambassador 2026.
-          </p>
+          <p class="hero-sub" data-en="Systems Engineering student at TecNM. Modernizing 12 branches with AI, code and common sense. Looking for an ambassador program in 2026." data-es="Estudiante de Ing. en Sistemas en TecNM. Modernizando 12 sucursales con IA, código y sentido común. Buscando programa ambassador 2026.">Systems Engineering student at TecNM. Modernizing 12 branches with AI, code and common sense. Looking for an ambassador program in 2026.</p>
           <div class="hero-meta mono">
             <span>Nuevo León, MX</span>
             <span class="sep">/</span>
-            <span>4° semestre</span>
+            <span data-en="4th semester" data-es="4° semestre">4th semester</span>
             <span class="sep">/</span>
             <span>TecNM ITNL</span>
             <span class="sep">/</span>
-            <span style="color: #16a34a;">● Disponible</span>
+            <span style="color: #16a34a;" data-en="● Available" data-es="● Disponible">● Available</span>
           </div>
           <div class="hero-cta">
-            <a href="#work" class="btn btn-primary">Ver proyectos →</a>
-            <a href="#contact" class="btn btn-ghost">Contactar</a>
+            <a href="#work" class="btn btn-primary" data-en="View projects →" data-es="Ver proyectos →">View projects →</a>
+            <a href="#contact" class="btn btn-ghost" data-en="Get in touch" data-es="Contactar">Get in touch</a>
           </div>
           <div class="hero-stats">
             <div class="hero-stat">
               <span class="hero-stat-num num-mono" data-target="14">0</span>
-              <span class="hero-stat-label">años en el negocio familiar</span>
+              <span class="hero-stat-label" data-en="years in the family business" data-es="años en el negocio familiar">years in the family business</span>
             </div>
             <div class="hero-stat">
               <span class="hero-stat-num num-mono">12</span>
-              <span class="hero-stat-label">sucursales operando</span>
+              <span class="hero-stat-label" data-en="branches operating" data-es="sucursales operando">branches operating</span>
             </div>
             <div class="hero-stat">
               <span class="hero-stat-num num-mono">1</span>
-              <span class="hero-stat-label">CEDIS en migración a Odoo</span>
+              <span class="hero-stat-label" data-en="CEDIS migrating to Odoo" data-es="CEDIS en migración a Odoo">CEDIS migrating to Odoo</span>
             </div>
             <div class="hero-stat">
               <span class="hero-stat-num num-mono">2°</span>
-              <span class="hero-stat-label">lugar Hackatec 2026</span>
+              <span class="hero-stat-label" data-en="place at Hackatec 2026" data-es="lugar Hackatec 2026">place at Hackatec 2026</span>
             </div>
           </div>
         </div>
@@ -925,15 +958,11 @@
       <div class="container">
         <div class="section-header reveal">
           <span class="section-number">01</span>
-          <h2 class="section-title">Perfil</h2>
+          <h2 class="section-title" data-en="Profile" data-es="Perfil">Profile</h2>
         </div>
         <div class="about-text reveal">
-          <p>
-            Estudiante de <strong>4° semestre de Ing. en Sistemas</strong> en el TecNM Instituto Tecnológico de Nuevo León. Trabajo a medio tiempo en el negocio familiar de manufactura y venta de tamales — <strong>12 sucursales</strong> y un CEDIS —, donde lidero la migración a Odoo, construyo dashboards operativos y sirvo de puente entre la empresa implementadora y el equipo operativo.
-          </p>
-          <p>
-            Mi ventaja: <strong>14 años de operación real</strong> antes de mi primer <code>function</code>. Eso me da contexto de negocio que muchos developers no tienen al empezar.
-          </p>
+          <p data-en="<strong>4th-semester Systems Engineering</strong> student at TecNM Instituto Tecnológico de Nuevo León. I work part-time at the family business — manufacturing and selling tamales across <strong>12 branches</strong> and one CEDIS — where I lead the Odoo migration, build operational dashboards, and act as the bridge between the implementation vendor and the operations team." data-es="Estudiante de <strong>4° semestre de Ing. en Sistemas</strong> en el TecNM Instituto Tecnológico de Nuevo León. Trabajo a medio tiempo en el negocio familiar de manufactura y venta de tamales — <strong>12 sucursales</strong> y un CEDIS —, donde lidero la migración a Odoo, construyo dashboards operativos y sirvo de puente entre la empresa implementadora y el equipo operativo.">4th-semester <strong>Systems Engineering</strong> student at TecNM Instituto Tecnológico de Nuevo León. I work part-time at the family business — manufacturing and selling tamales across <strong>12 branches</strong> and one CEDIS — where I lead the Odoo migration, build operational dashboards, and act as the bridge between the implementation vendor and the operations team.</p>
+          <p data-en="My edge: <strong>14 years of real-world operations</strong> before my first <code>function</code>. That gives me business context most developers don't have when starting out." data-es="Mi ventaja: <strong>14 años de operación real</strong> antes de mi primer <code>function</code>. Eso me da contexto de negocio que muchos developers no tienen al empezar.">My edge: <strong>14 years of real-world operations</strong> before my first <code>function</code>. That gives me business context most developers don't have when starting out.</p>
         </div>
       </div>
     </section>
@@ -943,43 +972,43 @@
       <div class="container">
         <div class="section-header reveal">
           <span class="section-number">02</span>
-          <h2 class="section-title">Stack</h2>
+          <h2 class="section-title" data-en="Stack" data-es="Stack">Stack</h2>
         </div>
         <div class="stack-grid reveal-stagger">
           <div class="stack-group">
-            <h3>AI-Augmented Development</h3>
+            <h3 data-en="AI-Augmented Development" data-es="AI-Augmented Development">AI-Augmented Development</h3>
             <ul>
               <li>Claude Code <span class="tag">Anthropic</span></li>
               <li>OpenCode</li>
               <li>Cursor</li>
-              <li>GPT-5 / Gemini <span class="level">secondary</span></li>
+              <li>GPT-5 / Gemini <span class="level" data-en="secondary" data-es="secondary">secondary</span></li>
             </ul>
           </div>
           <div class="stack-group">
-            <h3>Lenguajes</h3>
+            <h3 data-en="Languages" data-es="Lenguajes">Languages</h3>
             <ul>
-              <li>Python <span class="level">intermedio</span></li>
-              <li>JavaScript / TypeScript <span class="level">básico</span></li>
-              <li>SQL <span class="level">intermedio</span></li>
-              <li>HTML / CSS <span class="level">competente</span></li>
+              <li>Python <span class="level" data-en="intermediate" data-es="intermedio">intermediate</span></li>
+              <li>JavaScript / TypeScript <span class="level" data-en="basic" data-es="básico">basic</span></li>
+              <li>SQL <span class="level" data-en="intermediate" data-es="intermedio">intermediate</span></li>
+              <li>HTML / CSS <span class="level" data-en="proficient" data-es="competente">proficient</span></li>
             </ul>
           </div>
           <div class="stack-group">
-            <h3>Negocios & Datos</h3>
+            <h3 data-en="Business & Data" data-es="Negocios & Datos">Business & Data</h3>
             <ul>
-              <li>Odoo ERP <span class="level">en migración</span></li>
+              <li>Odoo ERP <span class="level" data-en="migrating" data-es="en migración">migrating</span></li>
               <li>Power BI</li>
               <li>Google Apps Script</li>
-              <li>Integración POS</li>
+              <li data-en="POS integration" data-es="Integración POS">POS integration</li>
             </ul>
           </div>
           <div class="stack-group">
-            <h3>Operaciones</h3>
+            <h3 data-en="Operations" data-es="Operaciones">Operations</h3>
             <ul>
-              <li>Limpieza y migración de datos</li>
-              <li>Investigación de operaciones</li>
-              <li>Diseño de procesos</li>
-              <li>Capacitación operativa</li>
+              <li data-en="Data cleaning & migration" data-es="Limpieza y migración de datos">Data cleaning & migration</li>
+              <li data-en="Operations research" data-es="Investigación de operaciones">Operations research</li>
+              <li data-en="Process design" data-es="Diseño de procesos">Process design</li>
+              <li data-en="Operational training" data-es="Capacitación operativa">Operational training</li>
             </ul>
           </div>
         </div>
@@ -991,23 +1020,21 @@
       <div class="container">
         <div class="section-header reveal">
           <span class="section-number">03</span>
-          <h2 class="section-title">Proyectos</h2>
+          <h2 class="section-title" data-en="Projects" data-es="Proyectos">Projects</h2>
         </div>
         <div class="projects-grid reveal-stagger">
           <article class="project">
             <span class="project-number">/01</span>
             <div class="project-content">
               <div class="project-head">
-                <h3 class="project-title">Solución civic-tech para IEEPC Nuevo León</h3>
+                <h3 class="project-title" data-en="Civic-tech solution for IEEPC Nuevo León" data-es="Solución civic-tech para IEEPC Nuevo León">Civic-tech solution for IEEPC Nuevo León</h3>
                 <div class="project-meta">
-                  <span class="badge badge-accent">2° lugar</span>
+                  <span class="badge badge-accent" data-en="2nd place" data-es="2° lugar">2nd place</span>
                   <span class="badge">Hackatec 2026</span>
                 </div>
               </div>
-              <p class="project-desc">
-                Herramienta para el Instituto Estatal Electoral y de Participación Ciudadana. Traducir un problema de gobernanza democrática en producto usable para ciudadanía.
-              </p>
-              <div class="project-tech">Figma · Python · API REST</div>
+              <p class="project-desc" data-en="A tool for the State Electoral and Citizen Participation Institute. Translating a democratic governance problem into a product citizens can actually use." data-es="Herramienta para el Instituto Estatal Electoral y de Participación Ciudadana. Traducir un problema de gobernanza democrática en producto usable para ciudadanía.">A tool for the State Electoral and Citizen Participation Institute. Translating a democratic governance problem into a product citizens can actually use.</p>
+              <div class="project-tech">Figma · Python · REST API</div>
             </div>
             <span class="project-aside">2026</span>
           </article>
@@ -1016,15 +1043,13 @@
             <span class="project-number">/02</span>
             <div class="project-content">
               <div class="project-head">
-                <h3 class="project-title">Migración Odoo · CEDIS familiar</h3>
+                <h3 class="project-title" data-en="Odoo migration · Family CEDIS" data-es="Migración Odoo · CEDIS familiar">Odoo migration · Family CEDIS</h3>
                 <div class="project-meta">
-                  <span class="badge badge-soft">En curso</span>
-                  <span class="badge">Producción</span>
+                  <span class="badge badge-soft" data-en="In progress" data-es="En curso">In progress</span>
+                  <span class="badge" data-en="Production" data-es="Producción">Production</span>
                 </div>
               </div>
-              <p class="project-desc">
-                Limpieza y preparación de datos del CEDIS. Diseño de procesos, mapeo de SKUs, integración con POS. Puente entre implementador y equipo operativo.
-              </p>
+              <p class="project-desc" data-en="Data cleanup and preparation for the CEDIS. Process design, SKU mapping, POS integration. Bridge between the implementation vendor and the operations team." data-es="Limpieza y preparación de datos del CEDIS. Diseño de procesos, mapeo de SKUs, integración con POS. Puente entre implementador y equipo operativo.">Data cleanup and preparation for the CEDIS. Process design, SKU mapping, POS integration. Bridge between the implementation vendor and the operations team.</p>
               <div class="project-tech">Odoo · Python · SQL · Sheets</div>
             </div>
             <span class="project-aside">2026</span>
@@ -1034,15 +1059,13 @@
             <span class="project-number">/03</span>
             <div class="project-content">
               <div class="project-head">
-                <h3 class="project-title">Dashboards operativos</h3>
+                <h3 class="project-title" data-en="Operational dashboards" data-es="Dashboards operativos">Operational dashboards</h3>
                 <div class="project-meta">
-                  <span class="badge">Producción</span>
-                  <span class="badge">12 sucursales</span>
+                  <span class="badge" data-en="Production" data-es="Producción">Production</span>
+                  <span class="badge" data-en="12 branches" data-es="12 sucursales">12 branches</span>
                 </div>
               </div>
-              <p class="project-desc">
-                Visualización de ventas, mermas y rotación para sucursales. Conectados a POS. Para terminar con Excels cerrando a las 11pm del domingo.
-              </p>
+              <p class="project-desc" data-en="Sales, waste and rotation visualization across branches. Connected to POS. Built to end the 11pm-Sunday Excel closing ritual." data-es="Visualización de ventas, mermas y rotación para sucursales. Conectados a POS. Para terminar con Excels cerrando a las 11pm del domingo.">Sales, waste and rotation visualization across branches. Connected to POS. Built to end the 11pm-Sunday Excel closing ritual.</p>
               <div class="project-tech">Apps Script · Sheets</div>
             </div>
             <span class="project-aside">2026</span>
@@ -1057,9 +1080,7 @@
                   <span class="badge">Hackathon</span>
                 </div>
               </div>
-              <p class="project-desc">
-                Primera participación en HackMTY. Trabajo bajo presión, equipos multidisciplinarios, pitch en 3 minutos. La base para volver en 2026.
-              </p>
+              <p class="project-desc" data-en="First HackMTY. Working under pressure, multidisciplinary teams, a 3-minute pitch. The foundation to come back in 2026." data-es="Primera participación en HackMTY. Trabajo bajo presión, equipos multidisciplinarios, pitch en 3 minutos. La base para volver en 2026.">First HackMTY. Working under pressure, multidisciplinary teams, a 3-minute pitch. The foundation to come back in 2026.</p>
               <div class="project-tech">— · — · —</div>
             </div>
             <span class="project-aside">2025</span>
@@ -1074,9 +1095,7 @@
                   <span class="badge badge-soft">Sept 2026</span>
                 </div>
               </div>
-              <p class="project-desc">
-                Segunda participación. Vuelvo con más foco, más stack, más historia que contar. Aprendiendo en público.
-              </p>
+              <p class="project-desc" data-en="Second time around. Coming back with more focus, more stack, more story to tell. Learning in public." data-es="Segunda participación. Vuelvo con más foco, más stack, más historia que contar. Aprendiendo en público.">Second time around. Coming back with more focus, more stack, more story to tell. Learning in public.</p>
               <div class="project-tech">— · — · —</div>
             </div>
             <span class="project-aside">2026</span>
@@ -1090,78 +1109,63 @@
       <div class="container">
         <div class="section-header reveal">
           <span class="section-number">04</span>
-          <h2 class="section-title">Experiencia</h2>
+          <h2 class="section-title" data-en="Experience" data-es="Experiencia">Experience</h2>
         </div>
         <div class="experience-list reveal-stagger">
           <div class="experience-item">
-            <span class="experience-date">2024 — Actual</span>
+            <span class="experience-date" data-en="2024 — Present" data-es="2024 — Actual">2024 — Present</span>
             <div class="experience-content">
-              <h3>Modernización tecnológica</h3>
-              <div class="role">Negocio familiar — Staff part-time</div>
-              <p>
-                Cabeza de la migración a Odoo del CEDIS. Limpieza de datos, dashboards operativos, integración con POS de las 12 sucursales. Puente entre la empresa implementadora y el equipo interno.
-              </p>
+              <h3 data-en="Technology modernization" data-es="Modernización tecnológica">Technology modernization</h3>
+              <div class="role" data-en="Family business — Part-time staff" data-es="Negocio familiar — Staff part-time">Family business — Part-time staff</div>
+              <p data-en="Leading the Odoo migration for the CEDIS. Data cleanup, operational dashboards, POS integration across 12 branches. Bridge between the implementation vendor and the internal team." data-es="Cabeza de la migración a Odoo del CEDIS. Limpieza de datos, dashboards operativos, integración con POS de las 12 sucursales. Puente entre la empresa implementadora y el equipo interno.">Leading the Odoo migration for the CEDIS. Data cleanup, operational dashboards, POS integration across 12 branches. Bridge between the implementation vendor and the internal team.</p>
             </div>
           </div>
           <div class="experience-item">
-            <span class="experience-date">2024 — Actual</span>
+            <span class="experience-date" data-en="2024 — Present" data-es="2024 — Actual">2024 — Present</span>
             <div class="experience-content">
-              <h3>Ing. en Sistemas</h3>
+              <h3 data-en="B.Sc. Systems Engineering" data-es="Ing. en Sistemas">B.Sc. Systems Engineering</h3>
               <div class="role">TecNM · Instituto Tecnológico de Nuevo León</div>
-              <p>
-                4° semestre (Agosto 2026). Proyección de egreso: 2029.
-              </p>
+              <p data-en="4th semester (August 2026). Expected graduation: 2029." data-es="4° semestre (Agosto 2026). Proyección de egreso: 2029.">4th semester (August 2026). Expected graduation: 2029.</p>
             </div>
-          </div>
           </div>
           <div class="experience-item">
             <span class="experience-date">2026</span>
             <div class="experience-content">
-              <h3>Hackatec 2026 · 2° lugar estatal</h3>
-              <div class="role">Reto civic-tech · IEEPC NL</div>
-              <p>
-                Solución tecnológica para el Instituto Estatal Electoral y de Participación Ciudadana de Nuevo León.
-              </p>
+              <h3 data-en="Hackatec 2026 · 2nd place state-level" data-es="Hackatec 2026 · 2° lugar estatal">Hackatec 2026 · 2nd place state-level</h3>
+              <div class="role" data-en="Civic-tech challenge · IEEPC NL" data-es="Reto civic-tech · IEEPC NL">Civic-tech challenge · IEEPC NL</div>
+              <p data-en="Tech solution for the State Electoral and Citizen Participation Institute of Nuevo León." data-es="Solución tecnológica para el Instituto Estatal Electoral y de Participación Ciudadana de Nuevo León.">Tech solution for the State Electoral and Citizen Participation Institute of Nuevo León.</p>
             </div>
           </div>
           <div class="experience-item">
             <span class="experience-date">2025</span>
             <div class="experience-content">
               <h3>HackMTY 2025</h3>
-              <div class="role">Hackathon · participación</div>
-              <p>
-                Primera experiencia formal en hackatón. Trabajo en equipo multidisciplinario, entrega en 48h.
-              </p>
+              <div class="role" data-en="Hackathon · participant" data-es="Hackathon · participación">Hackathon · participant</div>
+              <p data-en="First formal hackathon. Multidisciplinary team work, 48-hour delivery." data-es="Primera experiencia formal en hackatón. Trabajo en equipo multidisciplinario, entrega en 48h.">First formal hackathon. Multidisciplinary team work, 48-hour delivery.</p>
             </div>
           </div>
           <div class="experience-item">
             <span class="experience-date">2018 — 2024</span>
             <div class="experience-content">
-              <h3>Operaciones del negocio familiar</h3>
-              <div class="role">CEDIS y sucursales · roles operativos y administrativos</div>
-              <p>
-                Cajero, administrativo, planeación de producción, logística de distribución. Aprendizaje de investigación de operaciones y gestión de procesos en línea.
-              </p>
+              <h3 data-en="Family business operations" data-es="Operaciones del negocio familiar">Family business operations</h3>
+              <div class="role" data-en="CEDIS and branches · operations & admin roles" data-es="CEDIS y sucursales · roles operativos y administrativos">CEDIS and branches · operations & admin roles</div>
+              <p data-en="Cashier, administration, production planning, distribution logistics. Hands-on learning in operations research and process management." data-es="Cajero, administrativo, planeación de producción, logística de distribución. Aprendizaje de investigación de operaciones y gestión de procesos en línea.">Cashier, administration, production planning, distribution logistics. Hands-on learning in operations research and process management.</p>
             </div>
           </div>
           <div class="experience-item">
             <span class="experience-date">2018 — 2019</span>
             <div class="experience-content">
-              <h3>Diplomado en Soporte Técnico</h3>
+              <h3 data-en="Technical Support Diploma" data-es="Diplomado en Soporte Técnico">Technical Support Diploma</h3>
               <div class="role">FIME · UANL</div>
-              <p>
-                Completado a los 15 años. Diagnóstico, mantenimiento y reparación de hardware y software.
-              </p>
+              <p data-en="Completed at age 15. Hardware and software diagnostics, maintenance and repair." data-es="Completado a los 15 años. Diagnóstico, mantenimiento y reparación de hardware y software.">Completed at age 15. Hardware and software diagnostics, maintenance and repair.</p>
             </div>
           </div>
           <div class="experience-item">
             <span class="experience-date">2017 — 2019</span>
             <div class="experience-content">
-              <h3>Carrera Técnica en Electricidad y Electrónica Industrial</h3>
+              <h3 data-en="Technical degree in Industrial Electricity & Electronics" data-es="Carrera Técnica en Electricidad y Electrónica Industrial">Technical degree in Industrial Electricity & Electronics</h3>
               <div class="role">FIME · Facultad de Ingeniería Mecánica y Eléctrica, UANL</div>
-              <p>
-                Completada a los 15 años. Duración 1.5 años. Formación técnica en circuitos, instrumentación y sistemas eléctricos.
-              </p>
+              <p data-en="Completed at age 15. 1.5-year program. Training in circuits, instrumentation and electrical systems." data-es="Completada a los 15 años. Duración 1.5 años. Formación técnica en circuitos, instrumentación y sistemas eléctricos.">Completed at age 15. 1.5-year program. Training in circuits, instrumentation and electrical systems.</p>
             </div>
           </div>
         </div>
@@ -1173,20 +1177,20 @@
       <div class="container">
         <div class="section-header reveal">
           <span class="section-number">05</span>
-          <h2 class="section-title">Para programas ambassador</h2>
+          <h2 class="section-title" data-en="For ambassador programs" data-es="Para programas ambassador">For ambassador programs</h2>
         </div>
         <div class="ambassador-grid reveal-stagger">
           <div class="ambassador-card">
-            <h3><span class="num">01</span>Uso real</h3>
-            <p>Claude Code, OpenCode y Cursor en producción. Aprendizaje y migración con tus herramientas, no demos.</p>
+            <h3><span class="num">01</span><span data-en="Real usage" data-es="Uso real">Real usage</span></h3>
+            <p data-en="Claude Code, OpenCode and Cursor in production. Learning and migrating with your tools, not demos." data-es="Claude Code, OpenCode y Cursor en producción. Aprendizaje y migración con tus herramientas, no demos.">Claude Code, OpenCode and Cursor in production. Learning and migrating with your tools, not demos.</p>
           </div>
           <div class="ambassador-card">
-            <h3><span class="num">02</span>Audiencia real</h3>
-            <p>Estudiantes TecNM, LATAM, hijos de comerciantes. La próxima generación de usuarios que aún no te está mirando.</p>
+            <h3><span class="num">02</span><span data-en="Real audience" data-es="Audiencia real">Real audience</span></h3>
+            <p data-en="TecNM students, LATAM, merchant families' kids. The next generation of users not looking at you yet." data-es="Estudiantes TecNM, LATAM, hijos de comerciantes. La próxima generación de usuarios que aún no te está mirando.">TecNM students, LATAM, merchant families' kids. The next generation of users not looking at you yet.</p>
           </div>
           <div class="ambassador-card">
-            <h3><span class="num">03</span>Comunicación probada</h3>
-            <p>14 años de cara al público. Entreno a adultos mayores en sistemas nuevos.</p>
+            <h3><span class="num">03</span><span data-en="Proven communication" data-es="Comunicación probada">Proven communication</span></h3>
+            <p data-en="14 years of customer-facing work. I train older adults on new systems." data-es="14 años de cara al público. Entreno a adultos mayores en sistemas nuevos.">14 years of customer-facing work. I train older adults on new systems.</p>
           </div>
         </div>
       </div>
@@ -1197,7 +1201,7 @@
       <div class="container">
         <div class="section-header reveal">
           <span class="section-number">06</span>
-          <h2 class="section-title">Contacto</h2>
+          <h2 class="section-title" data-en="Contact" data-es="Contacto">Contact</h2>
         </div>
         <div class="contact-grid reveal-stagger">
           <a href="mailto:me@gerardosuastegui.com" class="contact-link">
@@ -1205,7 +1209,7 @@
             <span class="contact-value">me@gerardosuastegui.com</span>
           </a>
           <a href="tel:+528115626133" class="contact-link">
-            <span class="contact-label">Teléfono</span>
+            <span class="contact-label" data-en="Phone" data-es="Teléfono">Phone</span>
             <span class="contact-value">+52 81 1562 6133</span>
           </a>
           <a href="https://github.com/Dispearson-SC" class="contact-link" target="_blank" rel="noopener">
@@ -1214,7 +1218,7 @@
           </a>
           <a href="CV-Jose-Gerardo-Tapia-Suastegui.pdf" class="contact-link" target="_blank" rel="noopener">
             <span class="contact-label">CV</span>
-            <span class="contact-value">Descargar PDF ↓</span>
+            <span class="contact-value" data-en="Download PDF ↓" data-es="Descargar PDF ↓">Download PDF ↓</span>
           </a>
         </div>
       </div>
@@ -1225,7 +1229,7 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <span class="mark"></span>GT · Portafolio 2026
+          <span class="mark"></span><span data-en="GT · Portfolio 2026" data-es="GT · Portafolio 2026">GT · Portfolio 2026</span>
         </div>
         <div>© 2026</div>
       </div>
@@ -1319,6 +1323,52 @@
         window.scrollTo({ top, behavior: "smooth" });
       });
     });
+
+    /* ============================================================
+       I18N — default English, auto-detect browser, manual toggle
+       ============================================================ */
+    (function () {
+      const STORAGE_KEY = "preferred-lang";
+      const SUPPORTED = ["en", "es"];
+
+      const detect = () => {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved && SUPPORTED.includes(saved)) return saved;
+        const nav = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+        if (nav.startsWith("es")) return "es";
+        return "en";
+      };
+
+      const apply = (lang) => {
+        document.documentElement.lang = lang;
+        document.querySelectorAll("[data-en]").forEach((el) => {
+          const value = el.getAttribute("data-" + lang);
+          if (value == null) return;
+          if (el.tagName === "META") {
+            el.setAttribute("content", value);
+          } else if (el.children.length > 0 && /<[a-z][\s\S]*>/i.test(value)) {
+            el.innerHTML = value;
+          } else {
+            el.textContent = value;
+          }
+        });
+        document.querySelectorAll(".lang-btn").forEach((btn) => {
+          btn.setAttribute("aria-pressed", String(btn.dataset.lang === lang));
+        });
+      };
+
+      const lang = detect();
+      apply(lang);
+
+      document.querySelectorAll(".lang-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const next = btn.dataset.lang;
+          if (!SUPPORTED.includes(next)) return;
+          localStorage.setItem(STORAGE_KEY, next);
+          apply(next);
+        });
+      });
+    })();
   </script>
 </body>
 </html>
