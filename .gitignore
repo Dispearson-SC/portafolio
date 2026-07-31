@@ -1,0 +1,6 @@
+# Ignorar TODO por defecto
+*
+
+# Excepciones: lo único que se versiona
+!.gitignore
+!index.html
